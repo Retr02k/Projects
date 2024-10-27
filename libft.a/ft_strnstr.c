@@ -4,7 +4,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     // If needle is an empty string, return haystack
     if (*needle == '\0')
-        return (char *)haystack;
+        return ((char *)haystack);
 
     // Calculate length of needle
     size_t needle_len = 0;
@@ -24,11 +24,11 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
             }
             // If we matched the entire needle, return the starting position
             if (j == needle_len)
-                return (char *)&haystack[i];
+                return ((char *)&haystack[i]);
         }
         i++; // Move to the next character in haystack
     }
-    return NULL; // No match found
+    return (NULL); // No match found
 }
 /*
 // Test the function
@@ -46,6 +46,6 @@ int main()
         printf("'%s' not found in the first %zu characters of '%s'\n", needle, len, haystack);
     }
 
-    return 0;
+    return (0);
 }
 */

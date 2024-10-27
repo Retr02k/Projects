@@ -43,6 +43,6 @@ int main()
     printf("Resulting string: '%s'\n", dest);
     printf("Total length that would have been created: %zu\n", result);
 
-    return 0;
+    return (0);
 }
 */

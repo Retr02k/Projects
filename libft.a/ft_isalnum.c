@@ -63,5 +63,7 @@ int main()
 		printf("The string \"%s\" contains only alphanumeric characters.\n", test4);
 	else
 		printf("The string \"%s\" contains non-alphanumeric characters.\n", test4);
+
+	return (0);
 }
  */

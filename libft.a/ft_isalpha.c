@@ -35,6 +35,6 @@ int main()
 	else
 		printf("The string \"%s\" contains non-alphabetic characters.\n", str2);
 
-	return 0;
+	return (0);
 }
  */

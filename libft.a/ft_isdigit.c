@@ -43,6 +43,6 @@ int main()
 	else
 		printf("The string \"%s\" contains non-digit characters.\n", test4);
 
-	return 0;
+	return (0);
 }
  */

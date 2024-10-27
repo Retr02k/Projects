@@ -36,4 +36,6 @@ int main(void)
 	printf("'%s' -> %d\n", str2, ft_atoi(str2));
 	printf("'%s' -> %d\n", str3, ft_atoi(str3));
 	printf("'%s' -> %d\n", str4, ft_atoi(str4));
+
+	return (0);
 } */
