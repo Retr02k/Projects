@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "libft.h"
+#include	"libft.h"
+#include	<stdio.h>
 
 int	ft_isacii(int	c)
 {
