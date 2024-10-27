@@ -16,6 +16,7 @@ size_t	ft_strlcpy(char	*dest, char	*src,	size_t	size);
 int	ft_strlen(char *str);
 int ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char *ft_strrchr(const char *str, int c);
 int	ft_tolower(int c);
 int	ft_toupper(int	c);
 
