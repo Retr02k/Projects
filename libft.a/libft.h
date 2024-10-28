@@ -10,6 +10,7 @@ int ft_isalpha(const char *str);
 int	ft_isacii(int	c);
 int ft_isdigit(const char *str);
 int	ft_isprint(int	c);
+void	*ft_memset(void *ptr, int value, size_t num);
 char *ft_strchr(const char *str, int c);
 size_t ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char	*dest, char	*src,	size_t	size);
