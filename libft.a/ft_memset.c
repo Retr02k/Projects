@@ -1,6 +1,6 @@
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include	"libft.h"
+#include	<stdio.h>
+#include	<string.h>
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {
@@ -37,43 +37,43 @@ void	*ft_memset(void *ptr, int value, size_t num)
 
 	return (ptr); // Return the original pointer to the start of the memory area
 }
-
+/* 
 int main (void)
 {
 // Test case 1: Regular usage
-	char buffer1[20] = "Hello, World!";
-	printf("Before memset: %s\n", buffer1);
-	ft_memset(buffer1, '*', 5); // Set first 5 bytes to '*'
-	printf("After memset:  %s\n", buffer1); // Expected: "***** World!"
+	char string1[20] = "Hello, World!";
+	printf("Before memset: %s\n", string1);
+	ft_memset(string1, '*', 5); // Set first 5 bytes to '*'
+	printf("After memset:  %s\n", string1); // Expected: "***** World!"
 
 	// Test case 2: Setting to zero
-	char buffer2[20] = "Sample Text";
-	printf("\nBefore memset: %s\n", buffer2);
-	ft_memset(buffer2, 0, 6); // Set first 6 bytes to '\0'
-	printf("After memset:  %s\n", buffer2); // Expected: "" (empty string)
+	char string2[20] = "Sample Text";
+	printf("\nBefore memset: %s\n", string2);
+	ft_memset(string2, 0, 6); // Set first 6 bytes to '\0'
+	printf("After memset:  %s\n", string2); // Expected: "" (empty string)
 
 	// Test case 3: Setting with a value > 255
-	char buffer3[20] = "Another Test";
-	printf("\nBefore memset: %s\n", buffer3);
-	ft_memset(buffer3, 300, 5); // Set first 5 bytes, 300 should wrap to 44 ('*')
-	printf("After memset:  %s\n", buffer3); // Expected: "*****other Test"
+	char string3[20] = "Another Test";
+	printf("\nBefore memset: %s\n", string3);
+	ft_memset(string3, 300, 5); // Set first 5 bytes, 300 should wrap to 44 ('*')
+	printf("After memset:  %s\n", string3); // Expected: "*****other Test"
 
 	// Test case 4: Negative value
-	char buffer4[20] = "Negative Value";
-	printf("\nBefore memset: %s\n", buffer4);
-	ft_memset(buffer4, -10, 5); // Set first 5 bytes to 0
-	printf("After memset:  %s\n", buffer4); // Expected: "*****tive Value"
+	char string4[20] = "Negative Value";
+	printf("\nBefore memset: %s\n", string4);
+	ft_memset(string4, -10, 5); // Set first 5 bytes to 0
+	printf("After memset:  %s\n", string4); // Expected: "*****tive Value"
 
 	// Test case 5: Pointer is NULL
-	char *buffer5 = NULL;
-	if (ft_memset(buffer5, '*', 5) == NULL)
+	char *string5 = NULL;
+	if (ft_memset(string5, '*', 5) == NULL)
 		printf("\nNULL pointer test passed, returned NULL as expected.\n");
 
 	// Test case 6: Zero bytes to set
-	char buffer6[20] = "Test String";
-	printf("\nBefore memset: %s\n", buffer6);
-	ft_memset(buffer6, '#', 0); // No bytes should be set
-	printf("After memset:  %s\n", buffer6); // Expected: "Test String" (unchanged)
+	char string6[20] = "Test String";
+	printf("\nBefore memset: %s\n", string6);
+	ft_memset(string6, '#', 0); // No bytes should be set
+	printf("After memset:  %s\n", string6); // Expected: "Test String" (unchanged)
 
 	return (0);
-}
+} */

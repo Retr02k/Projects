@@ -5,6 +5,7 @@
 #include	<stdlib.h>	//for malloc, free, etc
 
 int	ft_atoi(const char	*str);
+void ft_bzero(void *s, size_t n);
 int ft_isalnum(const char *str);
 int ft_isalpha(const char *str);
 int	ft_isacii(int	c);
