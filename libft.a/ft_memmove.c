@@ -1,5 +1,6 @@
 #include	"libft.h"
 #include	<stdio.h>
+#include	<string.h>
 
 
 /* 
@@ -50,7 +51,7 @@ void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 
 	return (dest); // Return the original destination pointer
 }
-
+/* 
 int main (void)
 {
 	 // Test 1: Basic non-overlapping copy
@@ -93,3 +94,4 @@ int main (void)
 
     return (0);
 }
+*/
