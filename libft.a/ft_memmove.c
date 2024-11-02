@@ -53,17 +53,43 @@ void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 
 int main (void)
 {
-	// Test 1
-	char src1[] = "Hello World!";
-	char dest1[20];
-	ft_memmove(dest1, src1, ft_strlen(src1) + 1);
-	printf("Test 1 - Non-overlaping  copy:\n");
-	printf("Expected: %s\n", src1);
-	printf("Result:	&s\n\n", dest1);
+	 // Test 1: Basic non-overlapping copy
+    char src1[] = "Hello, World!";
+    char dest1[20];
+    ft_memmove(dest1, src1, strlen(src1) + 1);
+    printf("Test 1 - Non-overlapping copy:\n");
+    printf("Expected: %s\n", src1);
+    printf("Result:   %s\n\n", dest1);
 
+    // Test 2: Overlapping regions, src before dest
+    char overlap_src1[] = "Overlap Test";
+    ft_memmove(overlap_src1 + 3, overlap_src1, strlen(overlap_src1) + 1);
+    printf("Test 2 - Overlapping src before dest:\n");
+    printf("Expected: OveOverlap Test\n");
+    printf("Result:   %s\n\n", overlap_src1);
 
-	return (0);
+    // Test 3: Overlapping regions, dest before src
+    char overlap_src2[] = "Overlap Test";
+    ft_memmove(overlap_src2, overlap_src2 + 3, strlen(overlap_src2) - 3 + 1);
+    printf("Test 3 - Overlapping dest before src:\n");
+    printf("Expected: lap Test\n");
+    printf("Result:   %s\n\n", overlap_src2);
 
+    // Test 4: Copying zero bytes (should leave dest unchanged)
+    char src2[] = "Another Test";
+    char dest2[20] = "Unchanged";
+    ft_memmove(dest2, src2, 0);
+    printf("Test 4 - Zero bytes copy:\n");
+    printf("Expected: Unchanged\n");
+    printf("Result:   %s\n\n", dest2);
 
+    // Test 5: Exact buffer size copy
+    char src3[] = "Exact size";
+    char dest3[11];
+    ft_memmove(dest3, src3, strlen(src3) + 1);
+    printf("Test 5 - Exact buffer size copy:\n");
+    printf("Expected: %s\n", src3);
+    printf("Result:   %s\n\n", dest3);
 
+    return (0);
 }
