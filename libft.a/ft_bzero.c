@@ -25,6 +25,7 @@ void ft_bzero(void *s, size_t n)
     }
 }
 
+/*
 int main(void)
 {
     char string[20] = "Hello, World!";
@@ -34,3 +35,4 @@ int main(void)
 
     return (0);
 }
+*/
