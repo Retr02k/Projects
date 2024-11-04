@@ -8,12 +8,12 @@ int ft_isdigit(const char *str)
 	{
 		// Check if the character is not a digit
 		if (*str < '0' || *str > '9')
-			return 0;  // Return false if a non-digit character is found
+			return (0);  // Return false if a non-digit character is found
 
 		str++; // Move to the next character
 	}
 
-	return 1;  // Return true if all characters are digits
+	return (1);  // Return true if all characters are digits
 }
 /* 
 int main()
