@@ -17,24 +17,22 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	// src     ==> Pointer to the source memory area where bytes are copied from.
 	// n       ==> Number of bytes to copy.
 
-	// Define byte pointers for `dest` and `src`
-	unsigned char *d = (unsigned char *)dest;
-	const unsigned char *s = (const unsigned char *)src;
+
+	int i;
+	i = 0;
 
 	// Loop through each byte until `n` bytes have been copied
-	while (n > 0)
+	while ((int)n > i)
 	{
-		(*d = *s);  // Copy byte from source to destination
-		d++;      // Move destination pointer to the next byte
-		s++;      // Move source pointer to the next byte
-		n--;      // Decrease the remaining byte count
+		*(char *)(dest + i) = *(char *)(src + i);
+		i++;
 	}
 
 	// Return the original pointer to `dest` for function chaining
 	return (dest);
 }
 
-/*
+/* 
 int main(void)
 {
 	// Test case 1: Copying part of a string
@@ -79,4 +77,4 @@ int main(void)
 
 	return (0);
 }
-*/
+ */
