@@ -6,7 +6,7 @@
 The ft_memcmp function compares the first 'num' bytes (each interpreted as unsigned char) of the memory areas 'str1' and 'str2'.
 */
 
-int	*ft_memcmp(const void *str1, const void *str2, size_t num)
+int	ft_memcmp(const void *str1, const void *str2, size_t num)
 {
 	// If num is 0, return 0 since there is nothing to compare
 	if (num == 0)
@@ -36,7 +36,7 @@ int	*ft_memcmp(const void *str1, const void *str2, size_t num)
 	// If all compared bytes are equal, return 0
 	return (0); // Indicate that both memory areas are equal
 }
-/* 
+
 int main(void)
 {
 	// Test 1: Basic comparison
@@ -80,4 +80,3 @@ int main(void)
 
 	return (0);
 }
-*/
