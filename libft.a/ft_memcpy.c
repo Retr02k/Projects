@@ -3,39 +3,39 @@
 #include	<string.h>
 
 /*
-	*ft_memcpy - Copies `n` bytes from the memory area `src` to `dest`.
+    *ft_memcpy - Copies `n` bytes from the memory area `src` to `dest`.
 Notes:
-	This function does not handle overlapping memory regions. If `src`
-	and `dest` overlap, please use `ft_memmove` instead.
+    This function does not handle overlapping memory regions. If `src`
+    and `dest` overlap, please use `ft_ft_memmove` instead.
 */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	// dest	==> Pointer to the destination memory area where bytes are copied to.
-	// src		==> Pointer to the source memory area where bytes are copied from.
-	// n		==> Number of bytes to copy.
+    // dest	==> Pointer to the destination memory area where bytes are copied to.
+    // src		==> Pointer to the source memory area where bytes are copied from.
+    // n		==> Number of bytes to copy.
 
-	
-	// Check if the input pointers are NULL
-	if (dest == NULL || src == NULL)
-		return (NULL);  // If either `dest` or `src` is NULL, return NULL
+    
+    // Check if the input pointers are NULL
+    if (dest == NULL || src == NULL)
+        return (NULL);  // If either `dest` or `src` is NULL, return NULL
 
-	// Define byte pointers for `dest` and `src`
-	// Using `unsigned char` to ensure copying occurs byte by byte
-	unsigned char *d = (unsigned char *)dest;
-	const unsigned char *s = (const unsigned char *)src;
+    // Define byte pointers for `dest` and `src`
+    // Using `unsigned char` to ensure copying occurs byte by byte
+    unsigned char *d = (unsigned char *)dest;
+    const unsigned char *s = (const unsigned char *)src;
 
-	// Loop through each byte until `n` bytes have been copied
-	while (n > 0)
-	{
-		*d = *s;  // Copy byte from source to destination
-		d++;      // Move destination pointer to the next byte
-		s++;      // Move source pointer to the next byte
-		n--;      // Decrease the remaining byte count
-	}
+    // Loop through each byte until `n` bytes have been copied
+    while (n > 0)
+    {
+        *d = *s;  // Copy byte from source to destination
+        d++;      // Move destination pointer to the next byte
+        s++;      // Move source pointer to the next byte
+        n--;      // Decrease the remaining byte count
+    }
 
-	// Return the original pointer to `dest` for function chaining
-	return (dest);
+    // Return the original pointer to `dest` for function chaining
+    return (dest);
 }
 
 /*
@@ -65,11 +65,11 @@ int main(void)
     printf("Expected: Initial Value\n");
     printf("Result:   %s\n\n", dest3); // Should remain "Initial Value"
 
-    // Test case 4: Handling overlapping memory (should use memmove for overlap)
+    // Test case 4: Handling overlapping memory (should use ft_memmove for overlap)
     char src4[] = "Overlapping";
     ft_memcpy(src4 + 2, src4, 5); // Attempt to copy "Overl" into overlapping memory
     printf("Test 4 - Overlapping Copy (undefined behavior):\n");
-    printf("Result:   %s\n\n", src4); // Output varies; memmove recommended instead
+    printf("Result:   %s\n\n", src4); // Output varies; ft_memmove recommended instead
 
     // Test case 5: Copying with NULL destination (edge case)
     char *dest5 = NULL;

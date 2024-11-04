@@ -3,20 +3,20 @@
 
 int ft_isalpha(const char *str)
 {
-    // Loop through the string until we reach the null terminator
-    while (*str)
-    {
-        // Check if the current character is not alphabetic
-        if ((*str < 'A' || *str > 'Z') && (*str < 'a' || *str > 'z'))
-        {
-            // If it's not alphabetic, return 0 (false)
-            return (0);
-        }
-        str++; // Move to the next character in the string
-    }
+	// Loop through the string until we reach the null terminator
+	while (*str)
+	{
+		// Check if the current character is not alphabetic
+		if ((*str < 'A' || *str > 'Z') && (*str < 'a' || *str > 'z'))
+		{
+			// If it's not alphabetic, return 0 (false)
+			return (0);
+		}
+		str++; // Move to the next character in the string
+	}
 
-    // If all characters are alphabetic, return 1 (true)
-    return (1);
+	// If all characters are alphabetic, return 1 (true)
+	return (1);
 }
 /* 
 int main()
@@ -38,4 +38,4 @@ int main()
 
 	return (0);
 }
- */
+*/

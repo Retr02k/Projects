@@ -29,9 +29,9 @@ int	ft_atoi(const char	*str)
 int main(void)
 {
 	const char *str1 = "   1234";
-    const char *str2 = "  -5678";
-    const char *str3 = "42abc";
-    const char *str4 = "hello";
+	const char *str2 = "  -5678";
+	const char *str3 = "42abc";
+	const char *str4 = "hello";
 
 	printf("'%s' -> %d\n", str1, ft_atoi(str1));
 	printf("'%s' -> %d\n", str2, ft_atoi(str2));
