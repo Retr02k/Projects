@@ -1,46 +1,23 @@
-#include	"libft.h"
-#include	<stdio.h>
-#include	<string.h>
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stddef.h>
 
-void	*ft_memset(void *ptr, int value, size_t num)
-{
-	// ptr		==> Starting address of memory to be filled
-	// value  	==> Value to be filled (an int that will be cast to unsigned char)
-	// num  	==> Number of bytes to be filled starting from ptr
+void *ft_memset(void *ptr, int value, size_t num) {
+	unsigned char *p = (unsigned char *)ptr;
+	unsigned char val = (unsigned char)value;
 
-	// Check if the pointer is NULL
-	if (ptr == NULL)  
-		return (NULL);  // Return NULL if the pointer is invalid
+	if (num == 0) // If no bytes are to be set
+		return ptr; // Simply return the original pointer
 
-	unsigned char *p = (unsigned char *)ptr; // Cast ptr to unsigned char pointer for byte-wise operations
-	unsigned char val; // This will hold the value to be set in each byte
-
-	// Determine the value to set, ensuring it's treated as an unsigned char
-	if (value < 0)
-		val = 0; // Treat negative values as 0
-	 else if (value > 255)
-		val = (unsigned char)(value & 0xFF); // Use only the last 8 bits of the value
-	else
-		val = (unsigned char)value; // Cast value to unsigned char if in valid range
-
-	// Check for the edge case where num is 0
-	if (num == 0)  // If no bytes are to be set
-		return (ptr); // Simply return the original pointer
-
-	// Fill the memory area with the specified value
-	while (num > 0)
-	{
-		*p = val;  // Set the current byte to the determined value
-		p++;       // Move to the next byte
-		num--;     // Decrease the count of bytes left to set
-	}
+	while (num--)
+		(*p++ = val); // Set the current byte to the determined value and move to the next byte
 
 	return (ptr); // Return the original pointer to the start of the memory area
 }
 /* 
-int main (void)
-{
-// Test case 1: Regular usage
+int main(void) {
+	// Test case 1: Regular usage
 	char string1[20] = "Hello, World!";
 	printf("Before memset: %s\n", string1);
 	ft_memset(string1, '*', 5); // Set first 5 bytes to '*'
@@ -75,5 +52,12 @@ int main (void)
 	ft_memset(string6, '#', 0); // No bytes should be set
 	printf("After memset:  %s\n", string6); // Expected: "Test String" (unchanged)
 
+	// Test case 7: Setting beyond the bounds
+	char string7[20] = "Boundary Test";
+	printf("\nBefore memset: %s\n", string7);
+	ft_memset(string7, 'X', 25); // Attempt to set more bytes than the string length
+	printf("After memset:  %s\n", string7); // Expected: "XXXXXXXXXXXXXXXXXXXXX" (might overflow if not handled properly)
+
 	return (0);
-} */
+}
+ */

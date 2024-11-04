@@ -1,27 +1,22 @@
 #include	"libft.h"
 #include	<stdio.h>
 #include	<string.h>
+#include	<stddef.h>
 
 /*
 The ft_memcmp function compares the first 'num' bytes (each interpreted as unsigned char) of the memory areas 'str1' and 'str2'.
 */
 
-int	ft_memcmp(const void *str1, const void *str2, size_t num)
+
+int ft_memcmp(const void *str1, const void *str2, size_t num)
 {
 	// If num is 0, return 0 since there is nothing to compare
 	if (num == 0)
 		return (0); // Two memory areas are considered equal if no bytes are compared
 
-	if (str1 == NULL)
-		return -1; // If str1 is NULL, str2 is greater (you can decide how to handle this)
-
-	if (str2 == NULL)
-		return 1; // If str2 is NULL, str1 is greater
-
-
 	// Cast the input pointers to unsigned char pointers for byte-wise comparison
-	unsigned char *s1 = (unsigned char *)str1;
-	unsigned char *s2 = (unsigned char *)str2;
+	const unsigned char *s1 = (const unsigned char *)str1;
+	const unsigned char *s2 = (const unsigned char *)str2;
 
 	// Loop through each byte for comparison
 	while (num--)
@@ -37,6 +32,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t num)
 	return (0); // Indicate that both memory areas are equal
 }
 
+/* 
 int main(void)
 {
 	// Test 1: Basic comparison
@@ -80,3 +76,4 @@ int main(void)
 
 	return (0);
 }
+*/

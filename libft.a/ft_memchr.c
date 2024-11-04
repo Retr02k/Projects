@@ -1,6 +1,7 @@
 #include	"libft.h"
 #include	<stdio.h>
 #include	<string.h>
+#include	<stddef.h>
 
 /*
 	The ft_memchr function scans the initial 'num' bytes of the memory area pointed to by 'ptr'
@@ -9,30 +10,32 @@
 	otherwise, NULL is returned.
 */
 
-void    *ft_memchr(const void *ptr, int value, size_t num)
+
+void *ft_memchr(const void *ptr, int value, size_t num)
 {
 	// ptr      ==> A pointer to the block of memory where the search will take place.
 	// value    ==> The byte value to search for (converted to unsigned char).
 	// num      ==> The number of bytes to search within the memory block.
 
 	// Cast 'value' to unsigned char to ensure it is interpreted as a single byte
-	unsigned char (byte_val) = (unsigned char)value;
+	unsigned char byte_val = (unsigned char)value;
 
 	// Cast 'ptr' to unsigned char pointer for byte-wise comparison
-	unsigned char (*s) = (unsigned char *)ptr;
+	unsigned char *s = (unsigned char *)ptr;
 
 	// Loop through each byte in the memory area until 'num' bytes are checked
 	while (num > 0)
 	{
-		if (*s == byte_val)  // Check if the current byte matches 'byte_val'
-			return (s);        // Return pointer to the matching byte
+		if (*s == byte_val)	// Check if the current byte matches 'byte_val'
+			return (s);		// Return pointer to the matching byte
 
-		s++;                 // Move to the next byte
-		num--;               // Decrement bytes left to check
+		s++;				// Move to the next byte
+		num--;				// Decrement bytes left to check
 	}
-	
-	return (NULL);             // Return NULL if 'value' was not found in 'num' bytes
+
+	return (NULL);			// Return NULL if 'value' was not found in 'num' bytes
 }
+
 
 /* 
 int main(void)

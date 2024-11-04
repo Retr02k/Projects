@@ -3,10 +3,10 @@
 
 void ft_bzero(void *s, size_t n)
 {
-	// *s ==> pointer to the memory block that you want to set to zero
-	// n   ==> number of bytes to set to zero
+	// *s	==> pointer to the memory block that you want to set to zero
+	// n	==> number of bytes to set to zero
 
-	// Check if the pointer is NULL (not strictly necessary)
+	// Check if the pointer is NULL
 	if (s == NULL)
 		return; // Just return, since we are not expected to do anything
 
