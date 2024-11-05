@@ -10,10 +10,8 @@ Memory for the new string is obtained with 'malloc', and can be freed with 'free
 
 char *ft_strdup(const char *str)
 {
-	int length = ft_strlen(str);    // Get the length of 'str' using 'ft_strlen'
-
 	// Allocate memory for 'length + 1' (to include the null terminator)
-	char *dup = malloc((length + 1) * sizeof(char));
+	char *dup = malloc((ft_strlen(str) + 1) * sizeof(char));
 	if (dup == NULL)                // Check if memory allocation succeeded
 		return (NULL);
 
@@ -29,7 +27,7 @@ char *ft_strdup(const char *str)
 	*temp = '\0';					// Add the null terminator to the end of 'dup'
 	return (dup);					// Return the pointer to the start of the duplicated string
 }
-
+/* 
 int main(void)
 {
     char original[] = "Hello, world!";
@@ -38,13 +36,14 @@ int main(void)
     if (duplicate == NULL)
     {
         printf("Memory allocation failed.\n");
-        return 1; // Exit if memory allocation fails
+        return (1);					// Exit if memory allocation fails
     }
 
     printf("Original: %s\n", original);
     printf("Duplicate: %s\n", duplicate);
 
-    free(duplicate); // Free the memory allocated by ft_strdup
+    free(duplicate);				// Free the memory allocated by ft_strdup
 
-    return 0;
+    return (0);
 }
+ */
