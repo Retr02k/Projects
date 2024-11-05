@@ -26,6 +26,7 @@ size_t ft_strlen(const char	*str);
 int ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *str, int c);
+char *ft_strtrim(const char *str, const char *set);
 char *ft_substr(const char *str, unsigned int start, size_t len);
 int	ft_tolower(int c);
 int	ft_toupper(int	c);
