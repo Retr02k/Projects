@@ -20,7 +20,7 @@ void	*ft_memset(void *ptr, int value, size_t num);
 char *ft_strchr(const char *str, int c);
 size_t ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char	*dest, char	*src,	size_t	size);
-int	ft_strlen(char *str);
+int	ft_strlen(const char	*str);
 int ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *str, int c);
