@@ -1,7 +1,7 @@
-#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include	"libft.h"
+#include	<stdlib.h>
+#include	<stdio.h>
+#include	<string.h>
 
 // Recursive function to copy characters
 void ft_copy_recursively(char *dest, const char *src, unsigned int index, size_t remaining)

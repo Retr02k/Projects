@@ -31,6 +31,11 @@ int	ft_toupper(int	c);
 
 
 
+void ft_copy_recursively(char *dest, const char *src, unsigned int index, size_t remaining);
+
+
+
+
 
 
 

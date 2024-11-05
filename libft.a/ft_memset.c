@@ -1,7 +1,7 @@
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
+#include	"libft.h"
+#include	<stdio.h>
+#include	<string.h>
+#include	<stddef.h>
 
 void *ft_memset(void *ptr, int value, size_t num) {
 	unsigned char *p = (unsigned char *)ptr;
