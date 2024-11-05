@@ -30,20 +30,20 @@ char *ft_strdup(const char *str)
 /* 
 int main(void)
 {
-    char original[] = "Hello, world!";
-    char *duplicate = ft_strdup(original);
+	char original[] = "Hello, world!";
+	char *duplicate = ft_strdup(original);
 
-    if (duplicate == NULL)
-    {
-        printf("Memory allocation failed.\n");
-        return (1);					// Exit if memory allocation fails
-    }
+	if (duplicate == NULL)
+	{
+		printf("Memory allocation failed.\n");
+		return (1);					// Exit if memory allocation fails
+	}
 
-    printf("Original: %s\n", original);
-    printf("Duplicate: %s\n", duplicate);
+	printf("Original: %s\n", original);
+	printf("Duplicate: %s\n", duplicate);
 
-    free(duplicate);				// Free the memory allocated by ft_strdup
+	free(duplicate);				// Free the memory allocated by ft_strdup
 
-    return (0);
+	return (0);
 }
  */
