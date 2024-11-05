@@ -10,11 +10,11 @@ size_t ft_strlen(const char	*str)
 		len++;
 	return (len);	
 }
-/*
+/* 
 int main(void)
 {
 	char *str = "Hello World!";
 	printf("String: %s\n", str);
-	printf("The length of the string is: %d\n", ft_strlen(str));
+	printf("The length of the string is: %ld\n", ft_strlen(str));
 }
 */

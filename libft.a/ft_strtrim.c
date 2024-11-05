@@ -55,7 +55,7 @@ char *ft_strtrim(const char *str, const char *set)
 
     return (trimmed_str);
 }
-
+/* 
 int main(void)
 {
     const char *test1 = "   Hello, World!   ";
@@ -77,4 +77,4 @@ int main(void)
     free(trimmed3);
 
     return (0);
-}
+} */
