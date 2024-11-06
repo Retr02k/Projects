@@ -17,6 +17,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void	*dest, const void	*src, size_t	n);
 void	*ft_memset(void *ptr, int value, size_t num);
+char **ft_split(const char *str, char delimiter);
 char *ft_strchr(const char *str, int c);
 char *ft_strdup(const char *str);
 char *ft_strjoin(const char *str1, const char *str2);
