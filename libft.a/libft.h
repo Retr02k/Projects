@@ -12,6 +12,7 @@ int ft_isalpha(const char *str);
 int	ft_isacii(int	c);
 int ft_isdigit(const char *str);
 int	ft_isprint(int	c);
+char *ft_itoa(int n);
 void    *ft_memchr(const void *ptr, int value, size_t num);
 int	ft_memcmp(const void *str1, const void *str2, size_t num);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
