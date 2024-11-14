@@ -17,12 +17,24 @@ char *ft_strjoin(const char *str1, const char *str2)
 	if (joined_str == NULL)
 		return (NULL);
 
-	// Recursively copy 'str1' and 'str2' into the allocated memory
-	ft_copy_recursively(joined_str, str1, 0, len1);        // Copy str1 to joined_str
-	ft_copy_recursively(joined_str + len1, str2, 0, len2); // Copy str2 after str1 in joined_str
+	// Copy str1 into joined_str
+	size_t i = 0;
+	while (i < len1) {
+	    joined_str[i] = str1[i];
+	    i++;
+	}
+
+	// Copy str2 into joined_str, starting after str1
+	size_t j = 0;
+	while (j < len2) {
+	    joined_str[i + j] = str2[j];
+	    j++;
+	}
+	joined_str[i + j] = '\0';  // Null-terminate the concatenated string
 
 	return (joined_str);
 }
+
 /* 
 int main(void)
 {

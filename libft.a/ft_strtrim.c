@@ -23,7 +23,7 @@ char *ft_strtrim(const char *str, const char *set)
 
     // If 'str' is empty, return an empty string
     if (*str == '\0')
-	{
+    {
         char *empty_str = (char *)malloc(1);
         if (empty_str)
             *empty_str = '\0';
@@ -50,31 +50,38 @@ char *ft_strtrim(const char *str, const char *set)
     if (!trimmed_str)
         return (NULL);
 
-    // Use the recursive function to copy characters from str to trimmed_str
-    ft_copy_recursively(trimmed_str, str + start, 0, trimmed_len);
+    // Use a while loop to copy characters from str to trimmed_str
+    size_t i = 0;
+    while (i < trimmed_len) {
+        trimmed_str[i] = str[start + i];
+        i++;
+    }
+    trimmed_str[i] = '\0';  // Null-terminate the trimmed string
 
     return (trimmed_str);
 }
 
+/* 
 int main(void)
 {
-    const char *test1 = "   Hello, World!   ";
-    const char *set1 = " ";
-    char *trimmed1 = ft_strtrim(test1, set1);
-    printf("Original: '%s'\nTrimmed: '%s'\n", test1, trimmed1);
-    free(trimmed1); // Remember to free the allocated memory
+	const char *test1 = "   Hello, World!   ";
+	const char *set1 = " ";
+	char *trimmed1 = ft_strtrim(test1, set1);
+	printf("Original: '%s'\nTrimmed: '%s'\n", test1, trimmed1);
+	free(trimmed1); // Remember to free the allocated memory
 
-    const char *test2 = "***Hello, World!***";
-    const char *set2 = "*";
-    char *trimmed2 = ft_strtrim(test2, set2);
-    printf("Original: '%s'\nTrimmed: '%s'\n", test2, trimmed2);
-    free(trimmed2);
+	const char *test2 = "***Hello, World!***";
+	const char *set2 = "*";
+	char *trimmed2 = ft_strtrim(test2, set2);
+	printf("Original: '%s'\nTrimmed: '%s'\n", test2, trimmed2);
+	free(trimmed2);
 
-    const char *test3 = "NoTrimNeeded";
-    const char *set3 = " ";
-    char *trimmed3 = ft_strtrim(test3, set3);
-    printf("Original: '%s'\nTrimmed: '%s'\n", test3, trimmed3);
-    free(trimmed3);
+	const char *test3 = "NoTrimNeeded";
+	const char *set3 = " ";
+	char *trimmed3 = ft_strtrim(test3, set3);
+	printf("Original: '%s'\nTrimmed: '%s'\n", test3, trimmed3);
+	free(trimmed3);
 
-    return (0);
+	return (0);
 }
+*/
