@@ -21,6 +21,7 @@ void	*ft_memset(void *ptr, int value, size_t num);
 char **ft_split(const char *str, char delimiter);
 char *ft_strchr(const char *str, int c);
 char *ft_strdup(const char *str);
+void ft_striteri(char *str, void (*f)(unsigned int, char*));
 char *ft_strjoin(const char *str1, const char *str2);
 size_t ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char	*dest, char	*src,	size_t	size);

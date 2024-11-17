@@ -27,7 +27,7 @@ char	*ft_strmapi(const char	*str, char	(*f) (unsigned int, char))
 	return (result);
 }
 
-/* 
+/*
 // Example function to apply: converts letters to uppercase and appends their index
 char example_function(unsigned int index, char c)
 {
