@@ -25,6 +25,7 @@ char *ft_strjoin(const char *str1, const char *str2);
 size_t ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char	*dest, char	*src,	size_t	size);
 size_t ft_strlen(const char	*str);
+char	*ft_strmapi(const char	*str, char	(*f) (unsigned int, char));
 int ft_strncmp(char *s1, char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char *ft_strrchr(const char *str, int c);
