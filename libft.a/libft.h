@@ -41,10 +41,12 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 // Structure definition for linked list nodes
-typedef struct s_list {
+typedef struct s_list
+{
 	void            *content; // Pointer to the data of the node
 	struct s_list   *next;    // Pointer to the next node in the list
-} t_list;
+}
+t_list;
 
 // Function prototypes for linked list operations
 t_list  *ft_lstnew(void *content);
