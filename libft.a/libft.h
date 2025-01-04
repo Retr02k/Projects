@@ -50,5 +50,7 @@ t_list;
 
 // Function prototypes for linked list operations
 t_list  *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
+
 
 #endif
