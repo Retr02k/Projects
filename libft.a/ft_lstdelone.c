@@ -25,7 +25,7 @@ void del_content(void *content)
 int main()
 {
 	// Create a node with dynamically allocated content
-	char *content = strdup("Hello, World!");
+	char *content = ft_strdup("Hello, World!");
 	t_list *node = ft_lstnew(content);
 
 	if (node == NULL)

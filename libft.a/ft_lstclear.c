@@ -44,23 +44,18 @@ void print_list(t_list *head)
 
 int main()
 {
-	// Step 1: Create nodes with dynamically allocated content
 	t_list *node1 = ft_lstnew(ft_strdup("Node 1")); // strdup allocates memory for content
 	t_list *node2 = ft_lstnew(ft_strdup("Node 2"));
 	t_list *node3 = ft_lstnew(ft_strdup("Node 3"));
 
-	// Step 2: Link the nodes
 	node1->next = node2;
 	node2->next = node3;
 
-	// Step 3: Print the list before clearing
 	printf("List before clearing:\n");
 	print_list(node1);
 
-	// Step 4: Clear the list
 	ft_lstclear(&node1, del);
 
-	// Step 5: Check if the list is cleared
 	if (node1 == NULL)
 		printf("List cleared successfully! node1 is now NULL.\n");
 	else
