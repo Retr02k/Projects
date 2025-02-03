@@ -7,32 +7,20 @@
 
 int main(int argc, char **argv)
 {
-	int fd;
-	char *line;
+	char	*line;
+	int	fd;
 
-	// Check if a filename is provided
-	if (argc != 2)
-	{
-		printf("Usage: %s <file>\n", argv[0]);
-		return (1);
-	}
+	fd = open("test.txt", O_RDONLY);
+	line = get_next_line(fd);
 
-	// Open the file for reading
-	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
-	{
-		perror("Error opening file");
-		return (1);
-	}
-
-	// Read and print each line using get_next_line
-	while ((line = get_next_line(fd)) != NULL)
-	{
-		printf("%s", line);
-		free(line);
-	}
-
-	// Close the file
+	printf("%s", line);
 	close(fd);
-	return (0);
+	free(line);
+
+
+
+
+
+
+	return (1);
 }
