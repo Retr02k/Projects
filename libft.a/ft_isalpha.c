@@ -1,41 +1,19 @@
-#include	"libft.h"
-#include	<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psilva-p <psilva-p@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/14 16:29:28 by psilva-p          #+#    #+#             */
+/*   Updated: 2025/09/14 16:35:13 by psilva-p         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(const char *str)
+int	ft_isalpha(char c)
 {
-	// Loop through the string until we reach the null terminator
-	while (*str)
-	{
-		// Check if the current character is not alphabetic
-		if ((*str < 'A' || *str > 'Z') && (*str < 'a' || *str > 'z'))
-		{
-			// If it's not alphabetic, return 0 (false)
-			return (0);
-		}
-		str++; // Move to the next character in the string
-	}
-
-	// If all characters are alphabetic, return 1 (true)
-	return (1);
-}
-/* 
-int main()
-{
-	const char *str1 = "HelloWorld";
-	const char *str2 = "Hello123";
-
-	// Check if str1 is all alphabetic
-	if (ft_isalpha(str1))
-		printf("The string \"%s\" contains only alphabetic characters.\n", str1);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
 	else
-		printf("The string \"%s\" contains non-alphabetic characters.\n", str1);
-
-	// Check if str2 is all alphabetic
-	if (ft_isalpha(str2))
-		printf("The string \"%s\" contains only alphabetic characters.\n", str2);
-	else
-		printf("The string \"%s\" contains non-alphabetic characters.\n", str2);
-
-	return (0);
+		return (0);
 }
-*/
