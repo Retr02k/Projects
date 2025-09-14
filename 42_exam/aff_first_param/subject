@@ -15,4 +15,8 @@ vincent$
 $> ./aff_first_param "j'aime le fromage de chevre" | cat -e
 j'aime le fromage de chevre$
 $> ./aff_first_param
+<<<<<<< HEAD
 $
+=======
+$
+>>>>>>> 3668e4153763f7c7e71ba1eabdc07e1f5da83770
